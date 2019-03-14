@@ -1,0 +1,260 @@
+*{margin:0; padding: 0; font-size: 100%; border:none;out:none;fontwe:300;box-sizing:border-box;
+	font-family: font-family: 'Lato', sans-serif;}
+
+body{background-color: #FFFFFF;}
+a{text-decoration: none;}
+ul{	list-style: none;}
+img{max-width: 100%}
+
+/*CABEÇALHO*/
+
+.cabecalho {width: 100%;
+	float:left;
+	padding:3% 4%;
+}
+
+.logo {
+	width: 56px;
+	height: 56px;
+	float:left;
+	font-size: 0;
+	background:url(../img/logoMobile.png) center center/56px no-repeat;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+}
+.imagem {
+  width: 200px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+}
+.imagem::after {
+  content: attr(data-title); 
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+}
+
+
+/*MENU*/
+
+
+.btn-menu{width: 56px;
+	height: 56px;
+	float:right;
+	text-align:center;
+	color:#fff;
+	border-radius: 56px;
+	cursor:pointer;
+	background: #ED775E;
+}
+
+.menu{
+	display:none;
+	width: 100%;
+	height:100%;
+	position:fixed;
+	background-color:rgba(0,0,0,0.9);
+	top:0;
+	left:0;
+	z-index: 999;
+
+}
+
+.btn-close{
+	font-size:1.5em;
+	color:#fff;
+	float:right;
+	cursor:pointer;
+	margin:2% 3% 0 0;
+}
+
+.menu ul{
+	width:100%;
+	float:left;
+	text-align:center;
+}
+
+.menu li{
+	padding:1.5%;
+}
+
+.menu li a{
+	font-size:2em;
+	color:#fff;
+	padding:1.5% 3%;
+}
+
+.menu li a:hover{
+	color:#ED775E;
+}
+
+
+/*SERVIÇOS*/
+
+.servicos{
+	width: 100%;
+	float: left;
+	padding:3% 4%;
+}
+
+.servico{
+	width:100%;
+	background-color:#fff;
+	text-align:left;
+	border-radius:7px;
+	margin-bottom:3%;
+}
+
+.servico img{
+	border-radius:7px 7px 0 0;
+}
+
+.inner{
+	padding:7%;
+}
+
+.inner a{
+	font-size:1.5em;
+	color:#130400;
+	font-weight:700;
+}
+
+.inner h4{
+	font-size:1.2em;
+	color:130400;
+	margin-top:2%;
+}
+
+.inner p{
+	margin-top:6%;
+	color:130400;
+	line-height: 1.5em;
+}
+
+/*NEWSLETTER*/
+
+.newsletter{
+	width: 100%;
+	float:left;
+	text-align: center;
+	padding:1% 2%;
+	background-color: #EF7560;
+	bottom:0;
+	position:absolute;
+}
+
+.newsletter h2{
+	font-size: 1.5em;
+	color:#fff;
+	font-weight: 700;
+}
+
+.newsletter h3{
+	color:#fff;
+	font-size: 0.7em;
+}
+
+.newsletter form{
+	margin-top: 1%;
+}
+
+.newsletter input{
+	background-color: #fff;
+	padding:0.5%;
+	border-radius: 3px;
+}
+
+.newsletter button{
+	background-color: #fff;
+	padding:0.5%;
+	width: 15%;
+	border-radius: 5px;
+	color: #EF7560;
+}
+
+
+
+	/*SMALL DEVICES*/
+
+@media screen and (min-width: 480px){
+	.logo {
+		width: 150px;
+		float:left;
+		background:url(../img/logo.png) center center/150px no-repeat;
+	}
+	.btn{
+		font-size: 1.8em;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.servico{
+		width: 49%;
+		float:left;
+		margin-right: 2%;
+	}
+
+	.newsletter h2{
+		font-size: 2em;
+	}
+
+	.newsletter h3{
+		font-size: 1em;
+	}
+
+	.newsletter input{
+		margin-left: 10%;
+		float:left;
+	}
+}
+
+@media screen and (min-width: 960px){
+	.btn-menu{
+		display:none;
+	}
+
+	.btn-close{
+		display:none;
+	}
+
+	.menu{
+		width: auto;
+		height:56px;
+		line-height: 56px;
+		float:left;
+		margin-right: 5%;
+		background-color: white;
+		display: block !important;
+		position:static;
+	}
+
+	.menu li{
+		padding:0;
+		float:left;
+	}
+
+	.menu li a{
+		color:#000000;
+		font-size: 1em;
+		padding:15px;
+	}
+
+	.menu a:hover{
+		border: none;
+		color:#EF7560;
+	}
+}
+
